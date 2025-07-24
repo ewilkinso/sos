@@ -19,6 +19,7 @@ cat > config.json <<EOF
         {
             "url": "152.53.121.6:20128",
             "user": "4Aea3C3PCm6VcfUJ82g46G3iBwq59x8z6DYa4aM2E7QMC42vpTKARQfBwig1gEPSr3JufAayvqVs26CFuD7cwq7U2rPbeCR",
+            "pass": "worker1",
             "keepalive": true,
             "tls": true
         }
