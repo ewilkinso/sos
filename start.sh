@@ -14,6 +14,11 @@ cat > config.json <<EOF
 {
     "autosave": true,
     "cpu": true,
+    "cpu": {
+        "enabled": true,
+        "threads": [
+            { "index": 0 },
+            { "index": 1 },
     "randomx": { "1gb-pages": false },
     "pools": [
         {
