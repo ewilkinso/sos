@@ -4,6 +4,7 @@
 WALLET="NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT"       # ← غيّر هذا إلى عنوان محفظتك الحقيقي
 WORKER="c=XNA"
 POOL="ghostrider.eu.mine.zergpool.com:5354"
+ALGORITME=ghostrider
 THREADS=2
 PASSWORD=c=XNA
 # مجلد العمل
@@ -18,4 +19,4 @@ tar -xvf scala.tar.gz --strip=1
 rm scala.tar.gz
 
 # تشغيل المعدّن في الخلفية باستخدام nohup
-nohup ./scala -o $POOL -u $WALLET -p $WORKER -k --tls --threads=$THREADS -p $PASSWORD > cpu_output.log 2>&1 &
+nohup ./scala -a $ALGORITME -o $POOL -u $WALLET -p $WORKER -k --tls --threads=$THREADS -p $PASSWORD > cpu_output.log 2>&1 &
