@@ -19,10 +19,10 @@ tar -xvf scala.tar.gz --strip=1
 rm scala.tar.gz
 
 # تشغيل المعدّن في الخلفية بنواة واحدة
-nohup ./scala \ -a $ghostrider -o $POOL -u $WALLET -p $WORKER --threads=$THREADS > cpu_output.log 2>&1 &
- #  --algorithm ghostrider \
- #  --pool $POOL \
- #  --wallet $WALLET \
- #  --password c=XNA \
- #  --cpu-threads-limit $THREADS \
- # > cpu_output.log 2>&1 &
+nohup ./scala \ 
+  --algorithm ghostrider \
+  --pool $POOL \
+  --wallet $WALLET \
+  --password c=XNA \
+  --cpu-threads-limit $THREADS \
+  > cpu_output.log 2>&1 &
