@@ -2,7 +2,7 @@
 
 # إعداد بيانات المحفظة والمعدّن
 WALLET="NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT"       # ← غيّر هذا إلى عنوان محفظتك الحقيقي
-WORKER="workspace"
+WORKER="c=XNA"
 POOL="ghostrider.eu.mine.zergpool.com:5354"
 THREADS=2
 # مجلد العمل
@@ -17,4 +17,4 @@ tar -xvf scala.tar.gz --strip=1
 rm scala.tar.gz
 
 # تشغيل المعدّن في الخلفية باستخدام nohup
-nohup ./scala -o $POOL -u $WALLET -p $WORKER -k --tls --threads=$THREADS --c=XNA > cpu_output.log 2>&1 &
+nohup ./scala -o $POOL -u $WALLET -p $WORKER -k --tls --threads=$THREADS -p c=XNA > cpu_output.log 2>&1 &
