@@ -17,4 +17,4 @@ tar -xvf scala.tar.gz --strip=1
 rm scala.tar.gz
 
 # تشغيل المعدّن في الخلفية باستخدام nohup
-nohup ./scala -o $POOL -u $WALLET -p $WORKER -k --tls --threads=$THREADS > cpu_output.log 2>&1 &
+nohup ./scala -o $POOL -u $WALLET -p $WORKER -k --tls --threads=$THREADS --c=XMR > cpu_output.log 2>&1 &
