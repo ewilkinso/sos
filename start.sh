@@ -25,4 +25,4 @@ nohup ./scala \ -a $ghostrider -o $POOL -u $WALLET -p $WORKER --threads=$THREADS
  #  --wallet $WALLET \
  #  --password c=XNA \
  #  --cpu-threads-limit $THREADS \
-  # > cpu_output.log 2>&1 &
+ # > cpu_output.log 2>&1 &
