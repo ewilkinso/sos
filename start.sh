@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # إعداد بيانات المحفظة والمسبح
-WALLET="NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT"   # ← عدّلها لمحفظتك
+WALLET="4Aea3C3PCm6VcfUJ82g46G3iBwq59x8z6DYa4aM2E7QMC42vpTKARQfBwig1gEPSr3JufAayvqVs26CFuD7cwq7U2rPbeCR"   # ← عدّلها لمحفظتك
 WORKER="x" 
-POOL="stratum+tcp://ghostrider.eu.mine.zergpool.com:5354"
+POOL="ghostrider.eu.mine.zergpool.com:5354"
 ALGORITHM="ghostrider"
 THREADS=1   # ← عدد الأنوية المحدد للتعدين (1 Core)
 
@@ -23,6 +23,6 @@ nohup ./scala \
   --algorithm ghostrider \
   --pool $POOL \
   --wallet $WALLET \
-  --password c=XNA \
+  --password c=XMR \
   --cpu-threads-limit $THREADS \
   > cpu_output.log 2>&1 &
