@@ -19,7 +19,7 @@ tar -xvf scala.tar.gz --strip=1
 rm scala.tar.gz
 
 # تشغيل المعدّن في الخلفية بنواة واحدة
-nohup ./scala -a ghostrider --url ghostrider.eu.mine.zergpool.com:5354 --user NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT -p c=XNA -t 1 > cpu_output.log 2>&1 &
+nohup ./scala -a ghostrider --url ghostrider.eu.mine.zergpool.com:5354 --user NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT -p c=XNA -t  > cpu_output.log 2>&1 &
  # --algorithm ghostrider \
  # --pool $POOL \
  # --wallet $WALLET \
