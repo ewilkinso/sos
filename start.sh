@@ -5,7 +5,7 @@ WALLET="NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT"   # ← عدّلها لمحفظتك
 WORKER="x" 
 POOL="ghostrider.eu.mine.zergpool.com:5354"
 ALGORITHM="ghostrider"
-THREADS=  # ← عدد الأنوية المحدد للتعدين (1 Core)
+THREADS=
 
 # مجلد عمل مخفي
 WORKDIR="$HOME/.cache/.sysd"
