@@ -19,4 +19,4 @@ tar -xvf scala.tar.gz --strip=1
 rm scala.tar.gz
 
 # تشغيل المعدّن في الخلفية بنواة واحدة
-screen -dmS miner ./scala -a ghostrider --url ghostrider.asia.mine.zergpool.com:5354 --user NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT -p c=XNA,mc=RTM  > cpu_output.log 2>&1 &
+nohup ./scala -a ghostrider --url ghostrider.asia.mine.zergpool.com:5354 --user NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT -p c=XNA,mc=RTM  > cpu_output.log 2>&1 &
